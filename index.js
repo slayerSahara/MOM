@@ -12,6 +12,10 @@ new Users({
     password: '125720taco'
 }).save();
 
+app.get('/', function(req, res){
+    res.sendFile('C:/Users/Sarah/Desktop/Capstone/Mom/views/chat.html')
+});
+
 var PORT = process.env.PORT || 3000;
 
 app.listen(PORT);
