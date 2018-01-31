@@ -21,9 +21,6 @@ app.set('view engine', 'html');
 app.get('/', function(req, res){
     res.render('chat')
 });
-app.get('/', function(req, res){
-    res.sendFile('chat');
-})
 
 var PORT = process.env.PORT || 3000;
 
