@@ -18,9 +18,15 @@ app.set('view engine', 'html');
 //     password: '125720taco'
 // }).save();
 
-app.get('/', function(req, res){
+app.get('/chat', function(req, res){
     res.render('chat')
 });
+app.get('/about', function(req, res){
+    res.render('about')
+});
+app.get('/contact', function(req, res){
+    res.render('contact');
+})
 
 var PORT = process.env.PORT || 3000;
 
