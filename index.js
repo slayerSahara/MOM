@@ -18,12 +18,32 @@ app.set('view engine', 'html');
 //     password: '125720taco'
 // }).save();
 
-app.get('/', function(req, res){
+app.get('/index', function(req, res){
+    res.render('index');
+});
+app.get('/about', function(req, res){
+    res.render('about');
+});
+app.get('/contact', function(req, res){
+    res.render('contact');
+});
+app.get('/chat', function(req, res){
     res.render('chat')
 });
-
-app.get('/', function(req, res){
-    res.sendFile('chat')
+app.get('/find_help', function(req, res){
+    res.render('find_help');
+});
+app.get('/reg', function(req, res){
+    res.render('reg');
+});
+app.get('/create', function(req, res){
+    res.render('create');
+});
+app.get('/prof_1', function(req, res){
+    res.render('prof_1');
+});
+app.get('/login', function(req, res){
+    res.render('login');
 });
 
 var PORT = process.env.PORT || 3000;
