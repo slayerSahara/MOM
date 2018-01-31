@@ -25,8 +25,26 @@ app.get('/about', function(req, res){
     res.render('about')
 });
 app.get('/contact', function(req, res){
-    res.render('contact');
-})
+    res.render('contact')
+});
+app.get('/index', function(req, res){
+    res.render('index')
+});
+app.get('/find_help', function(req, res){
+    res.render('find_help')
+});
+app.get('/create', function(req, res){
+    res.sender('create')
+});
+app.get('/login', function(req, res){
+    res.sender('login')
+});
+app.get('/prof_1', function(req, res){
+    res.sender('prof_1')
+});
+app.get('/prof_2', function(req, res){
+    res.sender('prof_2')
+});
 
 var PORT = process.env.PORT || 3000;
 
