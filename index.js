@@ -7,7 +7,7 @@ var app = express();
 var Users = mongoose.model('userInfo');
 mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
-app.use(express.static('C:/Users/Sarah/Desktop/Capstone/Mom' + '/public'));
+app.use(express.static('C:/Users/Sarah/Desktop/Capstone/Capstone-Mom/MOM' + '/public'));
 
 new Users({
     username: 'bob',
@@ -15,7 +15,7 @@ new Users({
 }).save();
 
 app.get('/', function(req, res){
-    res.sendFile('C:/Users/Sarah/Desktop/Capstone/Mom/views/chat.html')
+    res.sendFile('C:/User/Sarah/Desktop/Capstone/Capstone-MOM/MOM/views/chat.html')
 });
 
 app.all('*', function(req, res, next){
