@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "html": "^1.0.0"
+  },
   "devDependencies": {},
   "engines": {
     "node": "8.9.4",

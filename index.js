@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var express = require('express');
+var path = require('path');
 require('./models/users');
 
 var app = express();
@@ -8,6 +9,9 @@ var Users = mongoose.model('userInfo');
 mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
 app.use(express.static('C:/Users/Sarah/Desktop/Capstone/Capstone-Mom/MOM' + '/public'));
+app.set('views', path.join(__dirname + '/views'));
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
 
 new Users({
     username: 'bob',
@@ -15,7 +19,7 @@ new Users({
 }).save();
 
 app.get('/', function(req, res){
-    res.sendFile('C:/User/Sarah/Desktop/Capstone/Capstone-MOM/MOM/views/chat.html')
+    res.render('chat')
 });
 
 app.all('*', function(req, res, next){
@@ -32,7 +36,7 @@ app.all('*', function(req, res, next){
 });
 
 app.get('/', function(req, res){
-    res.sendFile('chat.html')
+    res.sendFile('chat')
 });
 
 app.post('/setup', function(req, res){
