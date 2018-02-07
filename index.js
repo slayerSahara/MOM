@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
-var http = require('http'); 
-var io = require('socket.io')(http);
+var server = app.listen(8080);
+var io = require('socket.io').listen(server);
+var http = require('http');
 var path = require('path');
-var PORT = process.env.PORT || 3000;
+var moment = require('moment');
 
 require('./models/users');
 
@@ -12,6 +13,7 @@ var Users = mongoose.model('userInfo');
 mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
 app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname + '/node_modules')));
 app.set('views', path.join(__dirname + '/views'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
@@ -59,4 +61,5 @@ app.get('/prof_2', function(req, res){
     res.render('prof_2')
 });
 
+var PORT = process.env.PORT || 3000;
 app.listen(PORT);
