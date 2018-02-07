@@ -47,16 +47,16 @@ app.get('/find_help', function(req, res){
     res.render('find_help')
 });
 app.get('/create', function(req, res){
-    res.sender('create')
+    res.render('create')
 });
 app.get('/login', function(req, res){
-    res.sender('login')
+    res.render('login')
 });
 app.get('/prof_1', function(req, res){
-    res.sender('prof_1')
+    res.render('prof_1')
 });
 app.get('/prof_2', function(req, res){
-    res.sender('prof_2')
+    res.render('prof_2')
 });
 
 app.listen(PORT);
