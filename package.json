@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "html": "^1.0.0",
     "moment": "^2.20.1",
     "mongoose": "^5.0.2",
+    "passport-local": "^1.0.0",
     "socket.io": "^2.0.4"
   },
   "devDependencies": {},
