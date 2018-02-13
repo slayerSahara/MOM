@@ -7,18 +7,18 @@ var http = require('http');
 var path = require('path');
 var moment = require('moment');
 
-require('./models/users');
-
-var Users = mongoose.model('userInfo');
-mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
+//require('./models/users');
+// var Users = mongoose.model('userInfo');
+// mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/node_modules')));
+app.use(express.static(path.join(__dirname + '/config')));
 app.set('views', path.join(__dirname + '/views'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 
-app.get('/', function(req, res){
+app.get('/chat', function(req, res){
     res.sendFile(__dirname + '/chat.html');
 });
 
@@ -28,11 +28,12 @@ io.on('connection', function(socket){
     });
 });
 
-// new Users({
-//     username: 'bob',
-//     password: '125720taco'
-// }).save();
-
+app.get('/index', function(req, res){
+    res.render('index')
+});
+app.get('/', function(req, res){
+    res.render('index')
+});
 app.get('/chat', function(req, res){
     res.render('chat')
 });
@@ -42,9 +43,6 @@ app.get('/about', function(req, res){
 app.get('/contact', function(req, res){
     res.render('contact')
 });
-app.get('/index' || '/', function(req, res){
-    res.render('index')
-});
 app.get('/find_help', function(req, res){
     res.render('find_help')
 });
@@ -53,6 +51,9 @@ app.get('/create', function(req, res){
 });
 app.get('/login', function(req, res){
     res.render('login')
+});
+app.get('/reg', function(req, res){
+    res.render('reg')
 });
 app.get('/prof_1', function(req, res){
     res.render('prof_1')
