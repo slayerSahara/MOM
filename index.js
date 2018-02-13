@@ -55,12 +55,17 @@ app.get('/create', function(req, res){
 app.get('/login', function(req, res){
     res.render('login')
 });
+
 app.get('/reg', function(req, res){
     res.render('reg')
 });
 app.post('/reg', urlencodedParser ,function(req, res) {
     console.log(req.body.fname);
+    console.log(req.body.lname);
+    console.log(req.body.username);
+    console.log(req.body.password);
 });
+
 app.get('/prof_1', function(req, res){
     res.render('prof_1')
 });
