@@ -5,6 +5,7 @@ var server = app.listen(8080);
 var io = require('socket.io').listen(server);
 var http = require('http');
 var path = require('path');
+var bodyParser = require('body-parser');
 var moment = require('moment');
 
 //require('./models/users');
@@ -17,6 +18,8 @@ app.use(express.static(path.join(__dirname + '/config')));
 app.set('views', path.join(__dirname + '/views'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/chat', function(req, res){
     res.sendFile(__dirname + '/chat.html');
@@ -54,6 +57,9 @@ app.get('/login', function(req, res){
 });
 app.get('/reg', function(req, res){
     res.render('reg')
+});
+app.post('/reg', urlencodedParser ,function(req, res) {
+    console.log(req.body.fname);
 });
 app.get('/prof_1', function(req, res){
     res.render('prof_1')
