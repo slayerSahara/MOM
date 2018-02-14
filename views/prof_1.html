@@ -16,11 +16,11 @@
             Last Name: <input type="text" id="lname" name="lname" required>
             <br><br>
             Gender:
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="male">Male
+            <input type="radio" id="gender" name="gender" value="female">Female
+            <input type="radio" id="gender" name="gender" value="male">Male
             <br><br>
             Birthday:
-            <select required>
+            <select id="bday" required>
                 <option value="" disabled="disabled" selected="selected">Month</option>
                 <option value="Jan">January</option>
                 <option value="Feb">February</option>
@@ -35,7 +35,7 @@
                 <option value="Nov">November</option>
                 <option value="Dec">December</option>
             </select>
-            <select required>
+            <select id="bday" required>
                 <option value="" disabled="disabled" selected="selected">Day</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
@@ -69,7 +69,7 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
             </select>
-            <select required>
+            <select id="bday" required>
                 <option value="" disabled="disabled" selected="selected">Year</option>
                 <option value="2018">2018</option>
                 <option value="2017">2017</option>
@@ -174,13 +174,13 @@
                 <option value="1918">1918</option>
             </select>
             <br><br>
-            Phone Number: <input type:"number" name="phone" required>
+            Phone Number: <input type:"number" id="phone" name="phone" required>
             <br><br>
-            Email: <input type="email" name="email" required>
+            Email: <input type="email" id="email" name="email" required>
             <br><br>
-            Address: <input type="text" name="address" placeholder="Address" required>
-            <input type="text" name="city" placeholder="City" required>
-            <select required>
+            Address: <input type="text" id="address" name="address" placeholder="Address" required>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <select id="state" required>
                 <option value="" disabled="disabled" selected="selected">State</option>
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
@@ -233,13 +233,13 @@
                 <option value="WI">WI</option>
                 <option value="WY">WY</option>
             </select>
-            <input type="text" name="zip" placeholder="Zip Code" size="5" maxlength="5" required>
+            <input type="text" id="zip" name="zip" placeholder="Zip Code" size="5" maxlength="5" required>
             <br><br>
-            Desired Username: <input type="text" name="username" required>
+            Desired Username: <input type="text" id="username" name="username" required>
             <br><br>
-            Password: <input type="password" name="password" required>
+            Password: <input type="password" id="pass" name="password" required>
             <br><br>
-            Verify Password: <input type="password" name="password_verify" required>
+            Verify Password: <input type="password" id="pass" name="password_verify" required>
             <br><br>
             <input type="button" name="submit_btn" value="Continue" onclick="submit_form()">
         </form>

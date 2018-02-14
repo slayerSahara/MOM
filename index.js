@@ -8,13 +8,14 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 
-//require('./models/users');
-// var Users = mongoose.model('userInfo');
-// mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
+require('./models/users');
+var Users = mongoose.model('userInfo');
+mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/node_modules')));
 app.use(express.static(path.join(__dirname + '/config')));
+
 app.set('views', path.join(__dirname + '/views'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
@@ -60,14 +61,19 @@ app.get('/reg', function(req, res){
     res.render('reg')
 });
 app.post('/reg', urlencodedParser ,function(req, res) {
-    console.log(req.body.fname);
-    console.log(req.body.lname);
+    new Users();
+    console.log(req.body.fname + req.body.lname);
     console.log(req.body.username);
     console.log(req.body.password);
 });
 
 app.get('/prof_1', function(req, res){
     res.render('prof_1')
+});
+app.post('/prof_1', urlencodedParser, function(req, res){
+    console.log(req.body.fname + req.body.lname);
+    console.log(req.body.username);
+    console.log(req.body.password);
 });
 app.get('/prof_2', function(req, res){
     res.render('prof_2')
