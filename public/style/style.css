@@ -1,24 +1,39 @@
+html{
+    background-color: #F7F7E4;
+}
+
 h1 {
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3B1639;
+    text-align: center;
 }
+
 ul {
     list-style-type: none;
     margin: 10;
     padding: 0;
-    width: 150px;
-    background-color: #f1f1f1;
+    overflow: hidden;
+    background-color: #F7F7E4;
+    text-align: center;
+    border-style: outset;
+}
+
+li {
+    display: inline-block;
 }
 
 li a {
     display: block;
     color: #000;
-    padding: 8px 16ps;
+    padding: 12px;
+    text-align: center;
     text-decoration: none;
+    color: #3B1639;
 }
 
 li a:hover {
-    background-color: #555;
+    background-color: #F2897E;
     color: white;
 }
 
@@ -44,4 +59,19 @@ li a:hover {
 .fa-instagram {
     background: #125688;
     color: white;
+}
+
+#form {
+    color: black;
+    display: inline-block;
+    text-align: left;
+    margin: auto;
+}
+
+#contact_form {
+    color: black;
+}
+
+#messages {
+    list-style-type: none;
 }

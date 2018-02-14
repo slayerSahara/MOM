@@ -1,20 +1,21 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
-var userSchema = mongoose.Schema({
-    local :{
-        username: String,
-        password: String
-    }
-});
+var userSchema = mongoose.Schema({userID: String, pswd: String});
+var Users = mongoose.model('userinfos', userSchema);
 
-userSchema.methods.generateHash = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+new Users({
+    userID: 'Bob',
+    pswd: 'taco1234'
+}).save();
+
+// var test = Users.findOne({ 'userID' : 'Bob'});
+// console.log(test.select('userID'));
+
+userSchema.methods.generateHash = function(pswd) {
+    return bcrypt.hashSync(pswd, bcrypt.genSaltSync(8), null);
 };
 
-userSchema.methods.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.local.password);
+userSchema.methods.validPassword = function(pswd) {
+    return bcrypt.compareSync(pswd, this.local.pswd);
 };
-
-module.exports = mongoose.model('User', userSchema);
-mongoose.model('userInfo', userSchema);
