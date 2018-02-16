@@ -1,20 +1,66 @@
 html{
-    background-color: #F7F7E4;
+    background-color: white;
 }
 
 h1 {
     font-size: 30px;
+    margin-top: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #3B1639;
     text-align: center;
 }
 
+#messages {
+    list-style-type: none; 
+    margin: 10px; 
+    padding: 0; 
+    float: right; 
+    width: 68%;
+    text-align: right;
+    border-style: none;
+    background-color: white;
+}
+
+#messages li {
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    display: block;
+    height: 18px;
+    background: #ECDEF0;
+    border-style: outset;
+    border-radius: 25px;
+}
+
+#messages li:nth-child(even) {
+    display: block;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+    display: block;
+}
+
+#online_heading {
+    text-align: center; 
+    border-bottom: #000; 
+    border-bottom-width: 1px; 
+    border-bottom-style: solid;
+}
+
+#online {
+    border: #000; 
+    border-width: 1px; 
+    border-style: solid; 
+    width: 200px; 
+    height: 530px;
+}
+
 ul {
     list-style-type: none;
-    margin: 10;
+    margin-top: 40px;
     padding: 0;
     overflow: hidden;
-    background-color: #F7F7E4;
+    background-color: #E3E3E3;
     text-align: center;
     border-style: outset;
 }
@@ -33,8 +79,9 @@ li a {
 }
 
 li a:hover {
-    background-color: #F2897E;
+    background-color: #F07E6D;
     color: white;
+    border: black;
 }
 
 .fa {
@@ -70,8 +117,9 @@ li a:hover {
 
 #contact_form {
     color: black;
+    text-align: left;
 }
 
-#messages {
-    list-style-type: none;
+#login {
+    text-align: center;
 }
