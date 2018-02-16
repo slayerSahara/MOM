@@ -10,12 +10,17 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+    margin-top: 40px;
+}
+
 #messages {
     list-style-type: none; 
     margin: 10px; 
     padding: 0; 
     float: right; 
-    width: 68%;
+    max-width: 68%;
     text-align: right;
     border-style: none;
     background-color: white;
@@ -24,7 +29,7 @@ h1 {
 #messages li {
     padding: 5px 10px;
     margin: 0 0 10px 0;
-    display: block;
+    display: inline-block;
     height: 18px;
     background: #ECDEF0;
     border-style: outset;
@@ -38,6 +43,7 @@ h1 {
 #messages li:nth-child(odd) {
     background: #eee;
     display: block;
+    text-align: left;
 }
 
 #online_heading {
@@ -122,4 +128,8 @@ li a:hover {
 
 #login {
     text-align: center;
+}
+
+#about {
+    text-align: left;
 }
