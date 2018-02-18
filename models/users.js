@@ -2,12 +2,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
 var userSchema = mongoose.Schema({userID: String, pswd: String});
-var Users = mongoose.model('userinfos', userSchema);
-
-new Users({
-    userID: 'Bob',
-    pswd: 'taco1234'
-}).save();
+mongoose.model('userinfos', userSchema);
 
 // var test = Users.findOne({ 'userID' : 'Bob'});
 // console.log(test.select('userID'));

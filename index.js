@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var moment = require('moment');
 
 require('./models/users');
-//var Users = mongoose.model('userinfos');
+var Users = mongoose.model('userinfos');
 mongoose.connect('mongodb://sjones:Rumple!1630@ds249737.mlab.com:49737/mom_hotline');
 
 app.use(express.static(path.join(__dirname + '/public')));
@@ -21,8 +21,6 @@ app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-// var userSchema = mongoose.Schema({userID: String, pswd: String});
-// var Users = mongoose.model('userinfos', userSchema);
 
 io.on('connection', function(socket){
     socket.on('chat message', function(msg){
@@ -62,6 +60,11 @@ app.post('/reg', urlencodedParser ,function(req, res) {
     console.log(req.body.fname + " " + req.body.lname);
     console.log(req.body.username);
     console.log(req.body.password);
+
+    new Users({
+        userID: req.body.username,
+        pswd: req.body.password
+    }).save();
 });
 
 app.get('/prof_1', function(req, res){
@@ -71,6 +74,11 @@ app.post('/prof_1', urlencodedParser, function(req, res){
     console.log(req.body.fname + " " + req.body.lname);
     console.log(req.body.username);
     console.log(req.body.password);
+
+    new Users({
+        userID: req.body.username,
+        pswd: req.body.password
+    }).save();
 });
 app.get('/prof_2', function(req, res){
     res.render('prof_2')
