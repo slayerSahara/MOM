@@ -30,6 +30,12 @@ function checkForm(){
         return false;
     }
 
+    if(!ck_email.test(form.email.value)){
+        alert("Error: Input must be an email");
+        form.email.focus();
+        return false;
+    }
+
     if(!ck_phone.test(form.phone.value)){
         alert("Error: Input must be in phone number format with 10 numbers (Ex: 8885550000)");
         form.phone.focus();

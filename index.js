@@ -61,6 +61,7 @@ app.post('/reg', urlencodedParser ,function(req, res) {
         accnt_id: 0,
         first_name: req.body.fname,
         last_name: req.body.lname,
+        email: req.body.email,
         userID: req.body.username,
         pswd: req.body.password
     }).save();
@@ -74,6 +75,7 @@ app.post('/prof_1', urlencodedParser, function(req, res){
         accnt_id: 1,
         first_name: req.body.fname,
         last_name: req.body.lname,
+        email: req.body.email,
         userID: req.body.username,
         pswd: req.body.password
     }).save();
