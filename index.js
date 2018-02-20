@@ -57,11 +57,10 @@ app.get('/reg', function(req, res){
     res.render('reg')
 });
 app.post('/reg', urlencodedParser ,function(req, res) {
-    console.log(req.body.fname + " " + req.body.lname);
-    console.log(req.body.username);
-    console.log(req.body.password);
-
     new Users({
+        accnt_id: 0,
+        first_name: req.body.fname,
+        last_name: req.body.lname,
         userID: req.body.username,
         pswd: req.body.password
     }).save();
@@ -71,11 +70,10 @@ app.get('/prof_1', function(req, res){
     res.render('prof_1')
 });
 app.post('/prof_1', urlencodedParser, function(req, res){
-    console.log(req.body.fname + " " + req.body.lname);
-    console.log(req.body.username);
-    console.log(req.body.password);
-
     new Users({
+        accnt_id: 1,
+        first_name: req.body.fname,
+        last_name: req.body.lname,
         userID: req.body.username,
         pswd: req.body.password
     }).save();
