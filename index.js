@@ -34,6 +34,9 @@ app.get('/index', function(req, res){
 app.get('/', function(req, res){
     res.render('index')
 });
+app.get('/logged_in', function(req, res){
+    res.render('logged_in')
+});
 app.get('/chat', function(req, res){
     res.render('chat')
 });
@@ -56,6 +59,7 @@ app.get('/login', function(req, res){
 app.post('/login', urlencodedParser, function(req, res){
     console.log(req.body.username);
     console.log(req.body.password);
+    res.render('logged_in');
 });
 
 app.get('/reg', function(req, res){
@@ -70,6 +74,8 @@ app.post('/reg', urlencodedParser, function(req, res) {
         userID: req.body.username,
         pswd: req.body.password
     }).save();
+
+    res.render('login');
 });
 
 app.get('/prof_1', function(req, res){

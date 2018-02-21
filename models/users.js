@@ -14,7 +14,7 @@ mongoose.model('userinfos', userSchema);
 
 function checkLogin(){
     if(login.username.value != userID){
-        alert("There is not an active account with that username!");
+        alert("There is not an active account with that username");
     }
     if(login.password.value != pswd){
         alert("Incorrect password.");

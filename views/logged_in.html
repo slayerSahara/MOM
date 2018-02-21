@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <img src="/images/MomLogo.png" id="logo">
+        <h1>Means of Omitting Melancholy</h1>
+        <link href='/style/style.css' rel='stylesheet' type="text/css"/>
+        <title>MOM</title>
+        <ul>
+            <li><a href='about'>About</a></li>
+            <li><a href='contact'>Contact</a></li>
+            <li><a href='find_help'>Find Help</a></li>
+            <li><a href='chat'>Chat</a></li>
+        </ul>
+
+        <h3>We care like any MOM should.</h3>
+    </head>
+
+    <div class="content" id="content" style="max-width:500px">
+        <img class="homeScreen" src="/images/not-alone.jpg" style="width:100%">
+        <img class="homeScreen" src="/images/SPEAK-UP-LOGO-B.png" style="width:100%">
+        <img class="homeScreen" src="/images/raise-voice.jpg" style="width:100%">
+        <img class="homeScreen" src="/images/semicolon.jpg" style="width:100%">
+    </div>
+  
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("homeScreen");
+
+            for(i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+            }
+
+            myIndex++;
+            
+            if(myIndex > x.length){
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</html>
