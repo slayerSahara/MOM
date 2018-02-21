@@ -10,20 +10,14 @@
     </head>
 
     <body id="login">
-        <form method="post" name="login" id="login" onsubmit="return checkLogin(this);">
+        <form method="post" name="login" id="login" action="/login">
             Username: <input type="text" name="username" required>
             <br><br>
             Password: <input type="password" name="password" required>
             <br><br>
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit" onsubmit="checkLogin()">
             <br><br>
             <a href="password_reset">Forgot Password</a>
         </form>
-
-        <script>
-            function checkLogin(login){
-
-            }
-        </script>
     </body>
 </html>

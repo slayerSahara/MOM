@@ -49,14 +49,19 @@ app.get('/find_help', function(req, res){
 app.get('/create', function(req, res){
     res.render('create')
 });
+
 app.get('/login', function(req, res){
     res.render('login')
+});
+app.post('/login', urlencodedParser, function(req, res){
+    console.log(req.body.username);
+    console.log(req.body.password);
 });
 
 app.get('/reg', function(req, res){
     res.render('reg')
 });
-app.post('/reg', urlencodedParser ,function(req, res) {
+app.post('/reg', urlencodedParser, function(req, res) {
     new Users({
         accnt_id: 0,
         first_name: req.body.fname,
