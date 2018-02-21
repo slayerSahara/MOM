@@ -57,9 +57,20 @@ app.get('/login', function(req, res){
     res.render('login')
 });
 app.post('/login', urlencodedParser, function(req, res){
-    console.log(req.body.username);
-    console.log(req.body.password);
-    res.render('logged_in');
+
+    // if(req.body.user == userID && req.body.pass == pswd){
+    //     res.render('logged_in');
+    // }
+
+    Users.findOne({userID : req.body.user, pswd : req.body.pass})
+    .then((loggedInUser) => {
+        if(loggedInUser) {
+            res.render('logged_in');
+        }
+        else {
+            res.render('login');
+        }
+    });
 });
 
 app.get('/reg', function(req, res){

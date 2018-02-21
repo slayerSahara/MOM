@@ -11,12 +11,3 @@ mongoose.model('userinfos', userSchema);
 // userSchema.methods.validPassword = function(pswd) {
 //     return bcrypt.compareSync(pswd, this.local.pswd);
 // };
-
-function checkLogin(){
-    if(login.username.value != userID){
-        alert("There is not an active account with that username");
-    }
-    if(login.password.value != pswd){
-        alert("Incorrect password.");
-    }
-}
