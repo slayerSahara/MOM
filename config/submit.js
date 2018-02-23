@@ -11,7 +11,6 @@ function submit_form(){
 function checkForm(){
     var alph = /^[a-zA-Z]+$/;
     var ck_name = /^[A-Za-z0-9]{3,20}$/;
-    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{10,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
     var ck_phone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     var ck_address = /^[A-Za-z0-9\s,.'-]{3,}$/;
     var ck_username = /^[A-Za-z0-9]{6,20}$/;
@@ -27,12 +26,6 @@ function checkForm(){
     if(!ck_name.test(form.fname.value) || !ck_name.test(form.lname.value)){
         alert("Error: Input must be between 3 and 20 characters");
         form.fname.focus();
-        return false;
-    }
-
-    if(!ck_email.test(form.email.value)){
-        alert("Error: Input must be an email");
-        form.email.focus();
         return false;
     }
 

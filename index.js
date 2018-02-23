@@ -101,6 +101,8 @@ app.post('/prof_1', urlencodedParser, function(req, res){
         userID: req.body.username,
         pswd: req.body.password
     }).save();
+
+    res.render('prof_2');
 });
 app.get('/prof_2', function(req, res){
     res.render('prof_2')

@@ -4,8 +4,8 @@ html{
 
 #logo {
     width: 100px;
-    float: left;
     margin-top: -25px;
+    float: left;
 }
 
 #content {
@@ -15,20 +15,23 @@ html{
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 7%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color: #3B1639;
     text-align: center;
 }
 
 h3 {
     text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     margin-top: 40px;
 }
 
 h4 {
     text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 #messages {
@@ -131,14 +134,14 @@ li a:hover {
 }
 
 #form {
-    color: black;
+    color: #3B1639;
     display: inline-block;
     text-align: left;
     margin: auto;
 }
 
 #contact_form {
-    color: black;
+    color: #3B1639;
     text-align: left;
 }
 
