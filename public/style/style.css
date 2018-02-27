@@ -149,6 +149,13 @@ li a:hover {
     text-align: center;
 }
 
-#about {
+h3.about {
     text-align: left;
+    margin-left: 2%;
+}
+
+p.about {
+    text-align: left;
+    margin-left: 2%;
+    padding-right: 50%;
 }

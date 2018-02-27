@@ -17,11 +17,11 @@
             Last Name: <input type="text" id="lname" name="lname" required>
             <br><br>
             Gender:
-            <input type="radio" id="gender" name="gender" value="female">Female
-            <input type="radio" id="gender" name="gender" value="male">Male
+            <input type="radio" id="she" name="she" value="female">Female
+            <input type="radio" id="he" name="he" value="male">Male
             <br><br>
             Birthday:
-            <select id="bday" required>
+            <select id="bmonth" required>
                 <option value="" disabled="disabled" selected="selected">Month</option>
                 <option value="Jan">January</option>
                 <option value="Feb">February</option>
@@ -70,7 +70,7 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
             </select>
-            <select id="bday" required>
+            <select id="byear" required>
                 <option value="" disabled="disabled" selected="selected">Year</option>
                 <option value="2018">2018</option>
                 <option value="2017">2017</option>
@@ -240,7 +240,7 @@
             <br><br>
             Password: <input type="password" id="pass" name="password" required>
             <br><br>
-            Verify Password: <input type="password" id="pass" name="password_verify" required>
+            Verify Password: <input type="password" id="pass_ver" name="password_verify" required>
             <br><br>
             <input type="button" name="submit_btn" value="Continue" onclick="submit_form()">
         </form>

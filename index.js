@@ -58,10 +58,6 @@ app.get('/login', function(req, res){
 });
 app.post('/login', urlencodedParser, function(req, res){
 
-    // if(req.body.user == userID && req.body.pass == pswd){
-    //     res.render('logged_in');
-    // }
-
     Users.findOne({userID : req.body.user, pswd : req.body.pass})
     .then((loggedInUser) => {
         if(loggedInUser) {
@@ -107,6 +103,42 @@ app.post('/prof_1', urlencodedParser, function(req, res){
 app.get('/prof_2', function(req, res){
     res.render('prof_2')
 });
+
+// function setCookie(cname, cvalue, exdays) {
+//     var d = new Date();
+//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+
+//     var expires = 'expires = ' + d.toUTCString();
+//     document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+// }
+
+// function getCookie(cname) {
+//     var name = cname + '=';
+//     var decodedCookie = decodeURIComponent(document.cookie);
+//     var ca = decodedCookie.split(';');
+
+//     for(var i = 0; i < ca.length; i++) {
+//         var c = ca[i];
+//         while(c.charAt(0) == ' ') {
+//             c = c.substring(1);
+//         }
+//         if(c.indexOf(name) == 0){
+//             return c.substring(name.length, c.length);
+//         }
+//     }
+//     return '';
+// }
+
+// function checkCookie() {
+//     var userID = getCookie('userID');
+
+//     if(userID != ''){
+//         alert('Welcome again ' + userID);
+//     } else{
+//         userID = prompt('Please log in');
+//         render('login');
+//     }
+// }
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
