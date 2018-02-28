@@ -26,7 +26,7 @@ h1 {
 h3 {
     text-align: center;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    margin-top: 40px;
+    margin-top: 125px;
 }
 
 h4 {
@@ -43,6 +43,7 @@ h4 {
     text-align: right;
     border-style: none;
     background-color: white;
+    z-index: -1;
 }
 
 #messages li {
@@ -53,6 +54,7 @@ h4 {
     background: #ECDEF0;
     border-style: outset;
     border-radius: 25px;
+    position: inherit;
 }
 
 #messages li:nth-child(even) {
@@ -70,6 +72,7 @@ h4 {
     border-bottom: #000; 
     border-bottom-width: 1px; 
     border-bottom-style: solid;
+    margin-top: auto;
 }
 
 #online {
@@ -88,10 +91,36 @@ ul {
     background-color: #E3E3E3;
     text-align: center;
     border-style: outset;
+    position: sticky;
+    top: 0;
+}
+
+ul.accounts {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+    margin-right: 5%;
+}
+
+ul.find_help {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.other_options {
+    margin-left: 2%;
+    width: 350px;
 }
 
 li {
     display: inline-block;
+}
+
+li.find_help {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
 li a {
@@ -107,6 +136,12 @@ li a:hover {
     background-color: #F07E6D;
     color: white;
     border: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .fa {
@@ -152,9 +187,37 @@ li a:hover {
 h3.about {
     text-align: left;
     margin-left: 2%;
+    margin-top: 5%;
 }
 
 p.about {
+    text-align: left;
+    margin: 2% 0 15% 2%;
+    padding-right: 20%;
+}
+
+h3.about_mission {
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+p.about_mission {
+    text-align: left;
+    margin: 2% 0 15% 2%;
+    padding-right: 20%;
+}
+
+img.about_page {
+    float: right;
+}
+
+h3.find_help {
+    text-align: left;
+    margin-left: 2%;
+}
+
+p.find_help {
     text-align: left;
     margin-left: 2%;
     padding-right: 50%;

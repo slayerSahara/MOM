@@ -7,6 +7,9 @@ var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
 var moment = require('moment');
+var cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
 
 require('./models/users');
 var Users = mongoose.model('userinfos');
@@ -139,6 +142,3 @@ app.get('/prof_2', function(req, res){
 //         render('login');
 //     }
 // }
-
-var PORT = process.env.PORT || 3000;
-app.listen(PORT);
