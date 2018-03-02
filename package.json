@@ -17,6 +17,7 @@
     "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
     "passport-local": "^1.0.0",
+    "set-cookie-parser": "^2.1.1",
     "socket.io": "^2.0.4",
     "window-or-global": "^1.0.1"
   },

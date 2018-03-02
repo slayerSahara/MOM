@@ -9,9 +9,9 @@ html{
 }
 
 #content {
-    margin-top: 85px;
-    margin-left: auto;
-    margin-right: auto;
+    align-content: center;
+    margin-left: 25%;
+    margin-top: 5%;
 }
 
 h1 {
@@ -26,11 +26,11 @@ h1 {
 h3 {
     text-align: center;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    margin-top: 125px;
+    margin-top: 50px;
 }
 
 h4 {
-    text-align: center;
+    text-align: left;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -85,7 +85,7 @@ h4 {
 
 ul {
     list-style-type: none;
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 0;
     overflow: hidden;
     background-color: #E3E3E3;
@@ -98,8 +98,9 @@ ul {
 ul.accounts {
     list-style-type: none;
     padding: 0;
+    margin: 0%;
     float: right;
-    margin-right: 5%;
+    height: 40px;
 }
 
 ul.find_help {
@@ -115,6 +116,10 @@ ul.other_options {
 
 li {
     display: inline-block;
+}
+
+li.menu {
+    margin-left: 13%;
 }
 
 li.find_help {
@@ -175,9 +180,16 @@ li a:hover {
     margin: auto;
 }
 
-#contact_form {
-    color: #3B1639;
-    text-align: left;
+label.contact {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+
+input.sub {
+    display: inline-block;
+    text-align: right;
+    margin-left: 20%;
 }
 
 #login {
@@ -187,29 +199,13 @@ li a:hover {
 h3.about {
     text-align: left;
     margin-left: 2%;
-    margin-top: 5%;
+    margin-top: -10%;
 }
 
 p.about {
     text-align: left;
-    margin: 2% 0 15% 2%;
+    margin: 2% 0 2% 2%;
     padding-right: 20%;
-}
-
-h3.about_mission {
-    text-align: left;
-    margin-left: 2%;
-    margin-top: 5%;
-}
-
-p.about_mission {
-    text-align: left;
-    margin: 2% 0 15% 2%;
-    padding-right: 20%;
-}
-
-img.about_page {
-    float: right;
 }
 
 h3.find_help {
@@ -221,4 +217,16 @@ p.find_help {
     text-align: left;
     margin-left: 2%;
     padding-right: 50%;
+}
+
+td {
+    padding: 5px 30px 5px 30px;
+}
+
+td.other_options {
+    padding: 5px 150px 0 50px;
+}
+
+table.about_pg {
+    padding: 5% 5% 5% 12%;
 }

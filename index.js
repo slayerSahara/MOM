@@ -8,7 +8,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 var cookieParser = require('cookie-parser');
-
 app.use(cookieParser());
 
 require('./models/users');
