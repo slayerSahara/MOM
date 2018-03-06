@@ -7,18 +7,21 @@
         <title>Login</title>
         <ul>
             <li><a href='index'>Home</a></li>
+            <li><a href='about'>About</a></li>
+            <li><a href='contact'>Contact</a></li>
+            <li><a href='find_help'>Find Help</a></li>
         </ul>
     </head>
 
-    <body id="login">
-        <form method="post" name="login" id="login" action="/login">
-            Username: <input type="text" name="user" required>
+    <body id="login" class="login">
+        <form method="post" name="login" id="login" action="/login" style="margin:2% 0% 0% -5%">
+            <label class="login">Username:</label> <input type="text" name="user" style="border-color:#ECDEF0" required>
             <br><br>
-            Password: <input type="password" name="pass" required>
+            <label class="login">Password:</label> <input type="password" name="pass" style="border-color:#ECDEF0" required>
             <br><br>
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit" style="margin-left:5%">
             <br><br>
-            <a href="password_reset">Forgot Password</a>
+            <a href="password_reset" style="margin-left:5%">Forgot Password</a>
         </form>
     </body>
 </html>

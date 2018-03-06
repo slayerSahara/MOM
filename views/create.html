@@ -16,16 +16,44 @@
     <body>
         <div class='create'>
             <form method="post">
-                <p>Thank you for choosing to create an account! Please choose whether you
+                <p class="acct_msg">
+                    Thank you for choosing to create an account! Please choose whether you
                     would like a professional or regular account. A description of each can
                     be found below.
                 </p>
-                <p class="accounts">
-                    <ul>
-                        <li id="account"><a href="reg">Regular Account</a></li>
-                        <li id="account"><a href="prof_1">Professional Account</a></li>
-                    </ul>
-                </p>
+                <table style="width:100%" class="accounts">
+                    <tr>
+                        <td>
+                            <div class="sign_up">
+                                <ul class="sign_up">
+                                    <li class="account" id="account"><a href="prof_1">Professional Account</a></li>
+                                </ul>
+                            </div>
+
+                            <p class="prof_acct">
+                                This account option is for anyone who currently is, or wants to be, certified in suicide prevention
+                                and become a volunteer counselor for this business. This would entail having the necessary QPR certification
+                                in suicide prevention, being available for the majority of the day, and understanding the importance
+                                of being there for the victim you will be messaging with. This is such an important responsibility and 
+                                will need to be taken seriously!
+                            </p>                              
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="sign_up">
+                                <ul class="sign_up">
+                                    <li class="account" id="account"><a href="reg">Regular Account</a></li>
+                                </ul>                                  
+                            </div>
+                            <p class="reg_acct">
+                                If you have been impacted by suicide or depression at some point in your life, it is important for you
+                                to get the help that you need. By creating a regular account, you will be able to have completely free, 
+                                24/7 access to counselors who can help you when you need it most.
+                            </p>                             
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </body>

@@ -13,14 +13,14 @@
 
     <body id="signup">
         <form method="post" name="form" id="form" action="/reg">
-            First Name: <input type="text" id="fname" name="fname" required>
-            Last Name: <input type="text" id="lname" name="lname" required>
+            <label class="signup">First Name:</label> <input type="text" id="fname" name="fname" style="border-color:#ECDEF0" required>
+            <label class="signup">Last Name:</label> <input type="text" id="lname" name="lname" style="border-color:#ECDEF0" required>
             <br><br>
-            Gender:
+            <label class="signup">Gender:</label>
             <input type="radio" id="she" name="she" value="female">Female
             <input type="radio" id="he" name="he" value="male">Male
             <br><br>
-            Birthday:
+            <label class="signup">Birthday:</label>
             <select id="bmonth" required>
                 <option value="" disabled="disabled" selected="selected">Month</option>
                 <option value="Jan">January</option>
@@ -71,15 +71,15 @@
                 <option value="31">31</option>
             </select>
             <br><br>
-            Email: <input type="email" id="email" name="email" required>
+            <label class="signup">Email:</label> <input type="email" id="email" name="email" style="border-color:#ECDEF0" required>
             <br><br>
-            Desired Username: <input type="text" id="username" name="username" required>
+            <label class="signup">Desired Username:</label> <input type="text" id="username" name="username" style="border-color:#ECDEF0" required>
             <br><br>
-            Password: <input type="password" id="pass" name="password" required>
+            <label class="signup">Password:</label> <input type="password" id="pass" name="password" style="border-color:#ECDEF0" required>
             <br><br>
-            Verify Password: <input type="password" id="pass_ver" name="password_verify" required>
+            <label class="signup">Verify Password:</label> <input type="password" id="pass_ver" name="password_verify" style="border-color:#ECDEF0" required>
             <br><br>
-            <input type="button" name="submit_btn" value="Submit" onclick="submit_form()">
+            <input class="sub" type="button" name="submit_btn" value="Submit" onclick="submit_form()">
         </form>
     </body>
 </html>
