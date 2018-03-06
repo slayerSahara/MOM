@@ -111,7 +111,7 @@ ul.find_help {
 
 ul.other_options {
     margin-left: 2%;
-    width: 350px;
+    float: right;
 }
 
 li {
